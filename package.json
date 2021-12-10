@@ -4,13 +4,18 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
     "vue": "^3.2.24",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-proposal-private-methods": "^7.16.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.0",
     "@headlessui/vue": "^1.4.2",
     "@heroicons/vue": "^1.0.5",
     "@tailwindcss/aspect-ratio": "^0.4.0",
@@ -19,8 +24,19 @@
     "@tailwindcss/typography": "^0.5.0",
     "@types/tailwindcss": "^2.2.4",
     "@vitejs/plugin-vue": "^1.10.2",
+    "@vue/cli-plugin-babel": "^4.5.15",
+    "@vue/cli-plugin-unit-jest": "^4.5.15",
+    "@vue/test-utils": "^2.0.0-rc.16",
     "autoprefixer": "^10.4.0",
+    "jest-serializer-vue": "^2.0.2",
     "tailwindcss": "^3.0.0",
-    "vite": "^2.7.1"
+    "vite": "^2.7.1",
+    "vue-jest": "^3.0.7",
+    "vue-loader": "^15.9.8"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ]
   }
 }
